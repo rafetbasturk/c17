@@ -24,7 +24,7 @@
     <div>
       <span>Annually</span>
       <div id="switch" onclick="toggle()">
-        <button id="btn" role="switch" style="float: left;"></button>
+        <button id="btn" accesskey="a" role="switch" aria-checked="true" aria-labelledby="Switch to monthly or annually billing" style="float: left;"></button>
       </div>
       <span>Monthly</span>
     </div>
@@ -86,24 +86,7 @@
     Coded by <a href="https://www.frontendmentor.io/profile/rafetbasturk" target="_blank">Rafet</a>.
   </div>
 
-  <script>
-    function toggle(){
-      let button = document.getElementById("btn");
-      let annual = document.getElementsByClassName("annual");
-      let monthly = document.getElementsByClassName("monthly");
-
-      if (button.style.float == "left"){
-        button.style.float = "right";
-      } else{
-        button.style.float = "left";
-      };
-
-      for (let i=0; i<monthly.length; i++){
-        monthly[i].classList.toggle("no-display");
-        annual[i].classList.toggle("no-display");
-      };
-    }
-  </script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
